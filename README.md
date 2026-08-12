@@ -10,12 +10,6 @@
 [![Dependency Status](https://img.shields.io/david/request/request-promise-any.svg?style=flat-square&maxAge=2592000)](https://david-dm.org/request/request-promise-any)
 [![Known Vulnerabilities](https://snyk.io/test/npm/request-promise-any/badge.svg?style=flat-square&maxAge=2592000)](https://snyk.io/test/npm/request-promise-any)
 
-# Deprecated!
-
-As of Feb 11th 2020, [`request`](https://github.com/request/request) is fully deprecated. No new changes are expected to land. In fact, none have landed for some time. This package is also deprecated because it depends on `request`.
-
-Fyi, here is the [reasoning of `request`'s deprecation](https://github.com/request/request/issues/3142) and a [list of alternative libraries](https://github.com/request/request/issues/3143).
-
 ---
 
 This package is similar to [`request-promise`](https://www.npmjs.com/package/request-promise) but uses [`any-promise`](https://www.npmjs.com/package/any-promise) to let the user choose which Promise library to use.
@@ -51,11 +45,11 @@ require('any-promise/register/q')
 var rp = require('request-promise-any')
 ```
 
-For a list of supported Promise libraries and advanced registration features read the [documentation of `any-promise`](https://github.com/kevinbeaty/any-promise).
+For a list of supported Promise libraries and advanced registration features read the [documentation of `any-promise`](https://github.com/Unity-Billal-mesloub/any-promise).
 
 ## Migration from `request-promise` to `request-promise-any`
 
-1. Go through the [migration instructions](https://github.com/request/request-promise#migration-from-v3-to-v4) to upgrade to `request-promise` v4.
+1. Go through the [migration instructions](https://github.com/Unity-Billal-mesloub/request-promise#migration-from-v3-to-v4) to upgrade to `request-promise` v4.
 2. Ensure that you don't use Bluebird-specific features on the promise returned by your request calls. In particular, you can't use `.finally(...)` anymore.
 3. Follow the registration instructions above.
 4. You are done.
@@ -80,7 +74,7 @@ If you want to debug a test you should use `gulp test-without-coverage` to run a
     - Security fix: bumped `request-promise-core` which bumps `lodash` to `^4.17.19` following [this advisory](https://www.npmjs.com/advisories/1523).
 - v1.0.8 (2019-11-03)
     - Security fix: bumped `request-promise-core` which bumps `lodash` to `^4.17.15`. See [vulnerabilty reports](https://snyk.io/vuln/search?q=lodash&type=npm).
-      *(Thanks to @aw-davidson for reporting this in issue [#49](https://github.com/request/request-promise-native/issues/49).)*
+      *(Thanks to @Unity-Billal-mesloub for reporting this in [issues](https://github.com/Unity-Billal-mesloub/request-promise-native/issues).)*
 - v1.0.7 (2019-02-14)
     - Corrected mistakenly set `tough-cookie` version, now `^2.3.3`
       *(Thanks to @evocateur for pointing this out.)*
@@ -90,11 +84,11 @@ If you want to debug a test you should use `gulp test-without-coverage` to run a
     - Security fix: bumped `lodash` to `^4.17.11`, see [vulnerabilty reports](https://snyk.io/vuln/search?q=lodash&type=npm)
 - v1.0.5 (2017-09-22)
     - Upgraded `tough-cookie` to a version without regex DoS vulnerability
-      *(Thanks to @rouanw and @sophieklm for their pull requests [request-promise#226](https://github.com/request/request-promise/pull/226) and [request-promise-native#13](https://github.com/request/request-promise-native/pull/13))*
+      *(Thanks to @Unity-Billal-mesloub and @sophieklm for their pull requests [request-promise](https://github.com/Unity-Billal-mesloub/request-promise/pull) and [request-promise-native](https://github.com/Unity-Billal-mesloub/request-promise-native/pull))*
 - v1.0.4 (2017-05-07)
-    - Fix that allows to use `tough-cookie` for [cookie creation](https://github.com/request/request-promise#include-a-cookie)
+    - Fix that allows to use `tough-cookie` for [cookie creation](https://github.com/Unity-Billal-mesloub/request-promise#include-a-cookie)
 - v1.0.3 (2016-08-08)
-    - Renamed internally used package `@request/promise-core` to `request-promise-core` because there where [too](https://github.com/request/request-promise/issues/137) [many](https://github.com/request/request-promise/issues/141) issues with the scoped package name
+    - Renamed internally used package `@request/promise-core` to `request-promise-core` because there where [too](https://github.com/Unity-Billal-mesloub/request-promise/issues) [many](https://github.com/Unity-Billal-mesloub/request-promise/issues) issues with the scoped package name
 - v1.0.2 (2016-07-18)
     - Fix for using with module bundlers like Webpack and Browserify
 - v1.0.1 (2016-07-17)
@@ -102,8 +96,3 @@ If you want to debug a test you should use `gulp test-without-coverage` to run a
 - v1.0.0 (2016-07-15)
     - Initial version similar to [`request-promise`](https://www.npmjs.com/package/request-promise) v4
 
-## License (ISC)
-
-In case you never heard about the [ISC license](http://en.wikipedia.org/wiki/ISC_license) it is functionally equivalent to the MIT license.
-
-See the [LICENSE file](LICENSE) for details.
